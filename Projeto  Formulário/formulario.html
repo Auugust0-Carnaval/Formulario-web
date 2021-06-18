@@ -5,7 +5,6 @@
      <link rel="stylesheet" type="text/css" href="style.css" media="screen">
      <script src="JS/script.js"></script>
      <title>Formulário - Desenvolvedor</title>
-     
   </head>
    <body>
      <div>
@@ -14,10 +13,10 @@
      </div><br>
      <div id="tudo" style="border: solid;">
        <form name="f1">
-         <fieldset class="grupo"><!--Agrupador de campos--> <!--"strong" = Deixa em negrito--> 
+             <label for="txtcodigo"><strong>Código de usuário</strong></label><br>
+             <input type="text" name="txtcodigo" id="txtcodigo" required  placeholder="Somente  números" onblur="txtcodigo.value = validCodigo(txtcodigo.value);"><br><br>
              <label for=txtnome><strong>Nome do usuário</strong></label><br>
              <input type="text" name="txtnome" id="txtnome" required onblur="txtnome.value =   nomeComplete(txtnome.value);"><br><br>
-         </fieldset>
          <div>
              <label for="email"><strong>E-mail</strong></label><br>
              <input type="email" name="email" id="email" required>
@@ -26,6 +25,12 @@
              <label for="telefone"><strong>Telefone</strong></label><br>
              <input type="tel" id="telefone" name="telefone" placeholder="(99)99999-9999"  maxlength="14">
          </div><br>
+         <div id="endereco">
+             <label for="endereco"><strong>Endereço</strong></label><br>
+             <input size="30">
+             <label for="txtEstado"><strong>UF</strong></label>
+             <input type="text" name="txtEstado" id="txtEstado"  onblur="campoEstado(txtEstado);" size="1" maxlength="2" required> 
+         </div><br> 
          <div id="anosVida">
              <label for="anosvida"><strong>Idade</strong></label><br>
              <input type="number" id="anosvida" name="anosvida" required onblur="anosvida.value   = AnosdeVida(anosvida.value);">
