@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <meta charset="UTF-8">
+     <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+     <script src="JS/script.js"></script>
+     <title>Formulário - Desenvolvedor</title>
+     
+  </head>
+   <body>
+     <div>
+        <h1 id="titulo">Cadastro de Devs</h1>
+        <p id="subtitulo">Complete suas informações</p>
+     </div><br>
+     <div id="tudo" style="border: solid;">
+       <form name="f1">
+         <fieldset class="grupo"><!--Agrupador de campos--> <!--"strong" = Deixa em negrito--> 
+             <label for=txtnome><strong>Nome do usuário</strong></label><br>
+             <input type="text" name="txtnome" id="txtnome" required onblur="txtnome.value =   nomeComplete(txtnome.value);"><br><br>
+         </fieldset>
+         <div>
+             <label for="email"><strong>E-mail</strong></label><br>
+             <input type="email" name="email" id="email" required>
+         </div><br>
+         <div id="telefone">
+             <label for="telefone"><strong>Telefone</strong></label><br>
+             <input type="tel" id="telefone" name="telefone" placeholder="(99)99999-9999"  maxlength="14">
+         </div><br>
+         <div id="anosVida">
+             <label for="anosvida"><strong>Idade</strong></label><br>
+             <input type="number" id="anosvida" name="anosvida" required onblur="anosvida.value   = AnosdeVida(anosvida.value);">
+         </div><br>
+         <label for="senha"><strong>Senha</strong></label><br>
+         <input type="password" id="senha" name="senha" minlength="8" required  placeholder="Minimo 8 Carácteres"><br><br>
+         <label for="validacao"><strong>Confirme senha</strong></label><br>
+         <input type="password" id="validacao" name="validacao" required onblur="validarSenha()"><br><br>
+         <div>
+             <center><label><strong>Conte sua experiência como Desenvolvedor</strong></label></center><br>
+             <center><textarea class="texto" rows="6" style="width: 26em" id="exeperiencia"  name="exeriencia"></textarea></center><!--(Area de texto - "row" = Quantidade de linhas     para ser escritas)-->
+         </div>
+         <button class="botao" type="submit" value="Concluído">Concluído</button>
+       </form>
+     </div>    
+   </body>
+</html>
